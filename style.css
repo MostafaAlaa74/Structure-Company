@@ -26,6 +26,29 @@
 }
 
 /* ============================================
+   ACCESSIBILITY
+   ============================================ */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    z-index: 1000;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.skip-link:focus {
+    top: 6px;
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* ============================================
    ANIMATIONS
    ============================================ */
 @keyframes fadeInDown {
@@ -279,6 +302,18 @@ main {
     width: 60%;
 }
 
+.nav-links a:focus,
+.nav-links a:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+    color: var(--accent-color);
+}
+
+.nav-links a:focus::after,
+.nav-links a:focus-visible::after {
+    width: 60%;
+}
+
 .mobile-menu-btn {
     display: none;
     background: none;
@@ -437,6 +472,13 @@ main {
     box-shadow: 0 8px 25px var(--accent-glow);
 }
 
+.btn:focus,
+.btn:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px var(--accent-glow);
+}
+
 /* ============================================
    SERVICE TABS STRIP
    ============================================ */
@@ -481,6 +523,17 @@ main {
 }
 
 .service-tab:hover::after{
+    transform: scaleX(1);
+}
+
+.service-tab:focus,
+.service-tab:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+.service-tab:focus::after,
+.service-tab:focus-visible::after {
     transform: scaleX(1);
 }
 
@@ -603,6 +656,13 @@ main {
 
 .choose-pill.active i {
     color: var(--accent-color);
+}
+
+.choose-pill:focus,
+.choose-pill:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+    border-color: var(--accent-color);
 }
 
 .choose-content {
@@ -952,6 +1012,13 @@ main {
     color: var(--text-light);
     border-color: var(--primary-color);
     box-shadow: var(--shadow-md);
+}
+
+.filter-btn:focus,
+.filter-btn:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+    border-color: var(--accent-color);
 }
 
 .projects-grid {

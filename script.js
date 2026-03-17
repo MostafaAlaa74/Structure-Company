@@ -5,13 +5,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
 
+    // Initialize aria-expanded
+    mobileBtn.setAttribute('aria-expanded', 'false');
+
     mobileBtn.addEventListener('click', function() {
         navLinks.classList.toggle('active');
         mobileBtn.classList.toggle('active');
         navLinks.removeAttribute('style');
+        
+        // Update aria-expanded
+        const isExpanded = navLinks.classList.contains('active');
+        mobileBtn.setAttribute('aria-expanded', isExpanded);
+        
         // Toggle icon
         const icon = mobileBtn.querySelector('i');
-        if (navLinks.classList.contains('active')) {
+        if (isExpanded) {
             icon.classList.remove('fa-bars');
             icon.classList.add('fa-times');
         } else {
@@ -98,6 +106,14 @@ document.addEventListener('DOMContentLoaded', function() {
             serviceTabs.forEach(t => t.classList.remove('active'));
             this.classList.add('active');
         });
+        
+        tab.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                serviceTabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            }
+        });
     });
 
     // ============================================
@@ -107,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const choosePanels = document.querySelectorAll('.choose-text-panel');
 
     choosePills.forEach(pill => {
-        pill.addEventListener('click', function() {
+        const handlePillActivation = function() {
             const pillValue = this.getAttribute('data-pill');
 
             // Update active pill
@@ -121,6 +137,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     panel.classList.add('active');
                 }
             });
+        };
+
+        pill.addEventListener('click', handlePillActivation);
+        pill.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                handlePillActivation.call(this);
+            }
         });
     });
 
@@ -131,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectCards = document.querySelectorAll('.project-card');
 
     filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
+        const handleFilter = () => {
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
 
@@ -146,6 +170,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     card.classList.add('hide');
                 }
             });
+        };
+
+        button.addEventListener('click', handleFilter);
+        button.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                handleFilter();
+            }
         });
     });
 
@@ -264,17 +296,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const certModalOverlay = document.querySelector('.cert-modal-overlay');
 
     if (certModal && licenseCards.length > 0) {
+        let lastFocusedElement;
+
         licenseCards.forEach(card => {
             card.addEventListener('click', function() {
                 const img = this.querySelector('img');
                 const title = this.querySelector('h3').textContent;
                 
                 if (img) {
+                    lastFocusedElement = this;
                     certModalImg.src = img.src;
                     certModalImg.alt = img.alt;
                     certModalTitle.textContent = title;
+                    certModal.setAttribute('aria-hidden', 'false');
                     certModal.classList.add('active');
                     document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                    
+                    // Focus the close button
+                    setTimeout(() => {
+                        certModalClose.focus();
+                    }, 100);
                 }
             });
         });
@@ -282,7 +323,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Close modal functions
         const closeModal = () => {
             certModal.classList.remove('active');
+            certModal.setAttribute('aria-hidden', 'true');
             document.body.style.overflow = '';
+            
+            // Return focus to the last focused element
+            if (lastFocusedElement) {
+                lastFocusedElement.focus();
+            }
             
             // Clear image source after animation to prevent flashing previous image on next open
             setTimeout(() => {
