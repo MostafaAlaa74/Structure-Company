@@ -10,7 +10,7 @@
     --accent-glow: rgba(251, 191, 36, 0.3);
     --text-dark: #334155;
     --text-light: #f8fafc;
-    --text-muted: #64748b;
+    --text-muted: #4b5563;
     --bg-light: #f1f5f9;
     --bg-white: #ffffff;
     --border-color: #e2e8f0;
@@ -556,7 +556,7 @@ main {
     transform: scale(1.1);
 }
 
-.service-tab h4 {
+.service-tab h3 {
     font-size: 1.05rem;
     font-weight: 700;
     margin-bottom: 4px;
@@ -589,7 +589,7 @@ main {
 }
 
 .section-title span {
-    color: var(--accent-color);
+    color: var(--accent-color); /* Darker gold for better contrast on white background */
 }
 
 .section-title::after {
@@ -1431,8 +1431,8 @@ main {
     transform: translateY(-3px);
 }
 
-.footer-links-col h4,
-.footer-newsletter h4 {
+.footer-links-col h2,
+.footer-newsletter h2 {
     color: var(--text-light);
     font-size: 1.1rem;
     font-weight: 700;
@@ -1441,8 +1441,8 @@ main {
     padding-bottom: 12px;
 }
 
-.footer-links-col h4::after,
-.footer-newsletter h4::after {
+.footer-links-col h2::after,
+.footer-newsletter h2::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -1709,7 +1709,7 @@ main {
         padding: 15px;
     }
 }
-.sample-project-info h4 {
+.sample-project-info h3 {
     font-size: 1.4rem;
     margin-bottom: 10px;
     color: var(--primary-color);
@@ -2001,8 +2001,8 @@ html[dir="rtl"] .input-group label {
         justify-content: center;
     }
 
-    .footer-links-col h4::after,
-    .footer-newsletter h4::after {
+    .footer-links-col h2::after,
+    .footer-newsletter h2::after {
         right: auto;
         left: 50%;
         transform: translateX(-50%);

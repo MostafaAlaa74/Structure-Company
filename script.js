@@ -403,6 +403,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 el.placeholder = translations[lang][key];
             }
         });
+
+        // Update all elements with data-i18n-aria-label
+        document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
+            const key = el.getAttribute('data-i18n-aria-label');
+            if (key && translations[lang][key]) {
+                el.setAttribute('aria-label', translations[lang][key]);
+            }
+        });
     }
 
     if (langToggle && typeof translations !== 'undefined') {

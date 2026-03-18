@@ -113,6 +113,9 @@ const translations = {
         proj_elec_2_h3: "MEP Material Supply",
         proj_elec_2_p: "Supply of electromechanical equipment and low-current/CCTV systems.",
         
+        aria_newsletter: "Subscribe to newsletter",
+        aria_view_service: "Learn more about this service",
+        
         proj_elec_3_h3: "My Clinic Hospital",
         proj_elec_3_p: "Maintenance and operational works for hospital facilities.",
         proj_infra_1_h3: "Faculty of Marine Sciences",
@@ -347,6 +350,9 @@ const translations = {
         proj_elec_2_h3: "توريدات الـ MEP",
         proj_elec_2_p: "توريد مواد الأعمال الكهروميكانيكية وأنظمة التيار الخفيف.",
         
+        aria_newsletter: "الاشتراك في النشرة الإخبارية",
+        aria_view_service: "تعرف على المزيد حول هذه الخدمة",
+
         proj_elec_3_h3: "مستشفى My Clinic",
         proj_elec_3_p: "أعمال الصيانة والتشغيل لمرافق المستشفى.",
         proj_infra_1_h3: "مشروع كلية علوم البحار",
