@@ -253,6 +253,7 @@ const translations = {
         nav_services: "خدماتنا",
         nav_projects: "أعمالنا",
         nav_certs: "اعتماداتنا",
+        nav_partners: "شركاؤنا",
         nav_contact: "تواصل معنا",
         lang_text: "English",
         hero_sub: "نبني المستقبل بأيدٍ أمينة",
