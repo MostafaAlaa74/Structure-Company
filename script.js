@@ -364,6 +364,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const twitterDesc = document.querySelector('meta[property="twitter:description"]');
     
     let currentLang = document.documentElement.lang || 'en';
+    const supportedLanguages = ['en', 'ar'];
+    const defaultLang = 'en';
+    const savedLang = localStorage.getItem('preferredLanguage');
+    const initialLang = supportedLanguages.includes(savedLang) ? savedLang : defaultLang;
 
     function updateLanguage(lang) {
         currentLang = lang;
@@ -413,10 +417,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    if (typeof translations !== 'undefined') {
+        updateLanguage(initialLang);
+    }
+
     if (langToggle && typeof translations !== 'undefined') {
         langToggle.addEventListener('click', function(e) {
             e.preventDefault();
             const newLang = currentLang === 'en' ? 'ar' : 'en';
+            localStorage.setItem('preferredLanguage', newLang);
             updateLanguage(newLang);
         });
     }

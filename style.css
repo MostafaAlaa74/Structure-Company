@@ -503,11 +503,15 @@ main {
     text-align: center;
     transition: var(--transition);
     position: relative;
-    border-inline-start: 1px solid var(--border-color);
+}
+
+.service-tab:not(:last-child) {
+    border-inline-end: 1px solid var(--border-color);
+    padding-inline-end: 26px;
 }
 
 .service-tab:last-child {
-    border-inline-start: none;
+    border-inline-end: none;
 }
 
 .service-tab::after {
