@@ -1328,6 +1328,26 @@ main {
     margin: 0 auto;
 }
 
+.partner-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.partner-name {
+    font-size: 0.85rem;
+    color: #6c757d;
+    font-weight: 600;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.partner-card:hover .partner-name {
+    color: var(--accent-color);
+}
+
 .partner-logo {
     width: 100%;
     max-width: 140px;

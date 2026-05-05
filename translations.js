@@ -227,7 +227,12 @@ const translations = {
         page_land_hero_text: "High-quality materials and advanced systems for every project",
         page_land_desc: "We provide a reliable supply of premium building materials and integrated technical systems. Our inventory includes everything from raw construction materials to advanced automation and safety systems, ensuring that your project has access to the best components on the market.",
 
-        partners_title: "Our Success Partners"
+        partners_title: "Our Success Partners",
+        partner_1: "Alfanar",
+        partner_2: "Al Safwa Cement",
+        partner_3: "Bahra Electric",
+        partner_4: "E-Saudi",
+        partner_5: "Yanbu Cement"
     },
     ar: {
         site_title: "شركة ابتكار الحديث للمقاولات العامة",
@@ -457,6 +462,11 @@ const translations = {
         page_land_hero_text: "مواد عالية الجودة وأنظمة متطورة لكل مشروع",
         page_land_desc: "نحن نوفر توريداً موثوقاً لمواد البناء المتميزة والأنظمة التقنية المتكاملة. تشمل مخزوناتنا كل شيء من مواد البناء الخام إلى أنظمة الأتمتة والسلامة المتقدمة، مما يضمن حصول مشروعك على أفضل المكونات المتاحة في السوق.",
 
-        partners_title: "شركاء النجاح"
+        partners_title: "شركاء النجاح",
+        partner_1: "الفنار",
+        partner_2: "أسمنت الصفوة",
+        partner_3: "بحرة للكابلات",
+        partner_4: "إيجا السعودية",
+        partner_5: "أسمنت ينبع"
     }
 };
