@@ -225,7 +225,9 @@ const translations = {
 
         site_title_land: "Material & Systems Supply - Modern Innovation",
         page_land_hero_text: "High-quality materials and advanced systems for every project",
-        page_land_desc: "We provide a reliable supply of premium building materials and integrated technical systems. Our inventory includes everything from raw construction materials to advanced automation and safety systems, ensuring that your project has access to the best components on the market."
+        page_land_desc: "We provide a reliable supply of premium building materials and integrated technical systems. Our inventory includes everything from raw construction materials to advanced automation and safety systems, ensuring that your project has access to the best components on the market.",
+
+        partners_title: "Our Success Partners"
     },
     ar: {
         site_title: "شركة ابتكار الحديث للمقاولات العامة",
@@ -453,6 +455,8 @@ const translations = {
 
         site_title_land: "توريد المواد والأنظمة - ابتكار الحديث",
         page_land_hero_text: "مواد عالية الجودة وأنظمة متطورة لكل مشروع",
-        page_land_desc: "نحن نوفر توريداً موثوقاً لمواد البناء المتميزة والأنظمة التقنية المتكاملة. تشمل مخزوناتنا كل شيء من مواد البناء الخام إلى أنظمة الأتمتة والسلامة المتقدمة، مما يضمن حصول مشروعك على أفضل المكونات المتاحة في السوق."
+        page_land_desc: "نحن نوفر توريداً موثوقاً لمواد البناء المتميزة والأنظمة التقنية المتكاملة. تشمل مخزوناتنا كل شيء من مواد البناء الخام إلى أنظمة الأتمتة والسلامة المتقدمة، مما يضمن حصول مشروعك على أفضل المكونات المتاحة في السوق.",
+
+        partners_title: "شركاء النجاح"
     }
 };
