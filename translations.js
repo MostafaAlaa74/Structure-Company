@@ -15,6 +15,7 @@ const translations = {
         nav_services: "Services",
         nav_projects: "Projects",
         nav_certs: "Certifications",
+        nav_partners: "Partners",
         nav_contact: "Contact",
         lang_text: "العربية",
         hero_sub: "Building the future with trusted hands",
