@@ -548,11 +548,11 @@ const projectGalleries = {
         "Imgs/projects/Pools/WhatsApp Image 2026-05-15 at 2_imgupscaler.ai__2K.webp",
     ],
     "13": [
-        "Imgs/projects/Computer-collage/cardComputerCollage.webp",
-        "Imgs/projects/Computer-collage/computerCollage.webp",
-        "Imgs/projects/Computer-collage/computerCollage2.webp",
-        "Imgs/projects/Computer-collage/computerCollage3.webp",
-        "Imgs/projects/Computer-collage/IMG-20260508-WA0028.webp",
+        "Imgs/projects/ComputerCollage/cardComputerCollage.webp",
+        "Imgs/projects/ComputerCollage/computerCollage.webp",
+        "Imgs/projects/ComputerCollage/computerCollage2.webp",
+        "Imgs/projects/ComputerCollage/computerCollage3.webp",
+        "Imgs/projects/ComputerCollage/IMG-20260508-WA0028.webp",
         ],
 };
 
