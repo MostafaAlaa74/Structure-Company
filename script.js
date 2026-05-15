@@ -515,13 +515,13 @@ const projectGalleries = {
         "Imgs/projects/Virgin-Workstation/WhatsApp Image 2026-05-15 at 2.13.24 PM.webp",
     ],
     "10": [
-        "Imgs/projects/Whitesand/whiteSands1.webp",
-        "Imgs/projects/Whitesand/whiteSands2.webp",
-        "Imgs/projects/Whitesand/whiteSands3.webp",
-        "Imgs/projects/Whitesand/whiteSands4.webp",
-        "Imgs/projects/Whitesand/whiteSands5.webp",
-        "Imgs/projects/Whitesand/whiteSands6.webp",
-        "Imgs/projects/Whitesand/whiteSands7.webp",
+        "Imgs/projects/WhiteSand/whiteSands1.webp",
+        "Imgs/projects/WhiteSand/whiteSands2.webp",
+        "Imgs/projects/WhiteSand/whiteSands3.webp",
+        "Imgs/projects/WhiteSand/whiteSands4.webp",
+        "Imgs/projects/WhiteSand/whiteSands5.webp",
+        "Imgs/projects/WhiteSand/whiteSands6.webp",
+        "Imgs/projects/WhiteSand/whiteSands7.webp",
         
 
     ],
