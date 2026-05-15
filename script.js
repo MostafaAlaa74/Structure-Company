@@ -554,6 +554,13 @@ const projectGalleries = {
         "Imgs/projects/ComputerCollage/computerCollage3.webp",
         "Imgs/projects/ComputerCollage/IMG-20260508-WA0028.webp",
         ],
+    "14": [
+        "Imgs/projects/Vertex-Project/Vertex-main.webp",
+        "Imgs/projects/Vertex-Project/Vertex1.webp",
+        "Imgs/projects/Vertex-Project/Vertex2.webp",
+        "Imgs/projects/Vertex-Project/Vertex3.webp",
+        "Imgs/projects/Vertex-Project/Vertex4.webp",
+        ],
 };
 
 let currentProjectGallery = [];
@@ -679,3 +686,4 @@ function prevImage() {
     currentGalleryIndex = (currentGalleryIndex - 1 + currentProjectGallery.length) % currentProjectGallery.length;
     setLightboxImage(currentGalleryIndex);
 }
+

@@ -342,7 +342,7 @@ main {
         rgba(15, 23, 42, 0.75) 50%,
         rgba(15, 23, 42, 0.85) 100%
     ),
-    url('Imgs/heroImage.webp') center center/cover no-repeat;
+    url('Imgs/Main-Cover.webp') center center/cover no-repeat;
     min-height: 85vh;
     display: flex;
     align-items: center;
@@ -1450,10 +1450,35 @@ main {
     margin-bottom: 8px;
 }
 
-.contact-info-card p {
+.contact-info-card p,
+.contact-info-card a {
     color: var(--text-muted);
     font-size: 1rem;
     direction: ltr;
+}
+
+.contact-info-card a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 0;
+    width: 100%;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.contact-info-card a:hover,
+.contact-info-card a:focus {
+    color: var(--accent-color);
+    transform: translateX(2px);
+    text-decoration: underline;
+}
+
+.contact-info-card a:not(:last-child) {
+    margin-bottom: 8px;
 }
 
 /* ============================================
@@ -2529,7 +2554,8 @@ html[dir="rtl"] .input-group label {
     }
 
     /* Contact */
-    .contact-grid {
+    .contact-grid,
+    .contact-info-grid {
         grid-template-columns: 1fr;
     }
 
@@ -2619,3 +2645,4 @@ html[dir="rtl"] .input-group label {
         gap: 10px;
     }
 }
+

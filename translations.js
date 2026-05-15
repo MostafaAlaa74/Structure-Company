@@ -5,9 +5,9 @@ const translations = {
         site_keywords: "general contracting, construction, design, execution, infrastructure, electromechanical, solar energy, restoration, maintenance, Jeddah, Saudi Arabia",
         top_btn: "View Our Projects",
         phone: "+966558011030",
-        email: "ibtekarcoksa@gmail.com",
+        email: "ibtikar@modernibtikar.sa",
         phone_num: "+966558011030",
-        email_addr: "ibtekarcoksa@gmail.com",
+        email_addr: "ibtikar@modernibtikar.sa",
         logo_h2: "Modern Innovation",
         logo_span: "General Contracting",
         nav_home: "Home",
@@ -86,7 +86,7 @@ const translations = {
         serv_supply_h3: "Material & Systems Supply",
         page_supply_hero_text: "Premium building materials and advanced systems for mega projects.",
         page_details_title: "About This Service",
-        page_supply_desc: "At Modern Innovation Co., we are a trusted supplier of essential building materials and advanced systems for residential, commercial, and industrial projects. Our robust supply chain provides ready-mix concrete, structural steel, and all types of building blocks. Furthermore, we specialize in supplying high-quality electromechanical (MEP) equipment, HVAC components, firefighting systems, and low-current systems including CCTV. We ensure that all supplied materials meet strict technical specifications and quality standards to guarantee project success.",
+        page_supply_desc: "Supply of Electromechanical and Low Current Systems Our company provides electromechanical supply services for residential, commercial, and industrial projects. These services include electrical and mechanical systems, air conditioning and ventilation systems, plumbing systems, and fire protection systems. We also supply low-current systems, most notably CCTV systems. The company is committed to supplying certified, high-quality materials and equipment that conform to approved technical specifications and the requirements of relevant authorities. We guarantee adherence to delivery schedules and full coordination with implementation teams and consultants to achieve the highest levels of efficiency, quality, and project safety. Supply of building materials: Blocks (all types of red and black blocks) Supply of building materials: Reinforcing steel and structural steel Supply of building materials: Ready-mix concrete",
         page_supply_heading: "Our Supply Categories",
         
         cat_supply_1_h3: "MEP & Low Current Systems",
@@ -260,7 +260,7 @@ const translations = {
     project_3_desc: "Integration of high-specification HVAC, electrical, and plumbing systems.",
     
     project_4_title: "Royal Palaces",
-    project_4_desc: "High-end luxury residential construction with intricate stone cladding and interior finishing.",
+    project_4_desc: "High-end luxury residential construction with intricate stone cladding and interior finishing (Sheikh Faisal Palace and the Palace of His Highness Prince Faisal bin Nawaf).",
     
     project_5_title: "Formula 1 Projects",
     project_5_desc: "Delivering high-pressure infrastructure for the Saudi Arabian Grand Prix.",
@@ -288,6 +288,9 @@ const translations = {
 
     project_13_title:"Computer College Project",
     project_13_desc:"Concrete Works - University of North Jeddah (Usfan)",
+
+    project_14_title: "The Headquarters Business Park",
+    project_14_desc: "Design and implementation of Vertex Company headquarters - a sophisticated multi-purpose development blending contemporary architectural design with advanced structural engineering solutions.",
         projects_cta_h2: "Ready to Start Your Project?",
         projects_cta_p: "Contact us today to discuss your construction needs and get a free consultation",
         projects_cta_btn: "Get in Touch",
@@ -300,9 +303,9 @@ const translations = {
         site_keywords: "مقاولات عامة, بناء, تصميم, تنفيذ, بنية تحتية, أعمال كهروميكانيكية, طاقة شمسية, ترميم, صيانة, جدة, المملكة العربية السعودية",
         top_btn: "استعرض مشاريعنا",
         phone: "+966558011030",
-        email: "ibtekarcoksa@gmail.com",
+        email: "ibtikar@modernibtikar.sa",
         phone_num: "+966558011030",
-        email_addr: "ibtekarcoksa@gmail.com",
+        email_addr: "ibtikar@modernibtikar.sa",
         logo_h2: "ابتكار الحديث",
         logo_span: "للمقاولات العامة",
         nav_home: "الرئيسية",
@@ -368,7 +371,7 @@ const translations = {
         serv_supply_h3: "توريد المواد والأنظمة",
         page_supply_hero_text: "أجود مواد البناء والأنظمة المتطورة للمشاريع العملاقة.",
         page_details_title: "عن هذه الخدمة",
-        page_supply_desc: "في شركة ابتكار الحديث، نفخر بكوننا مورداً موثوقاً لمواد البناء الأساسية والأنظمة المتطورة للمشاريع السكنية والتجارية والصناعية. نوفر من خلال سلسلة التوريد القوية لدينا الخرسانة الجاهزة، حديد التسليح، والصلب الإنشائي، بالإضافة إلى جميع أنواع البلوك. كما نتخصص في توريد مواد الأعمال الكهروميكانيكية (MEP)، أنظمة التكييف، معدات مكافحة الحريق، وأنظمة التيار الخفيف بما فيها كاميرات المراقبة (CCTV). نلتزم بتوريد مواد مطابقة لأعلى المواصفات الفنية لضمان كفاءة وجودة المشاريع.",
+        page_supply_desc: "توريد مواد الأعمال الكهروميكانيكية وأنظمة التيار الخفيف (Electro-Mechanical & Low Current supply)تقدم شركتنا خدمات توريد مواد الأعمال الكهروميكانيكية للمشاريع السكنية والتجارية والصناعية، وتشمل أنظمة الكهرباء والميكانيكا، والتكييف والتهوية، وأنظمة السباكة، وأنظمة مكافحة الحريق.​بالإضافة إلى أنظمة التيار الخفيف وعلى رأسها أنظمة المراقبة بالكاميرات (CCTV).تلتزم الشركة بتوريد مواد ومعدات معتمدة وذات جودة عالية مطابقة للمواصفات الفنية المعتمدة ومتطلبات الجهات المختصة، مع ضمان الالتزام بالجداول الزمنية للتوريد والتنسيق الكامل مع فرق التنفيذ والاستشاريين بما يحقق أعلى مستويات الكفاءة والجودة وسلامة الأعمال.​توريد مواد البناء من البلوك (جميع أنواع البلوك الأحمر والبلوك الأسود)​توريد مواد البناء من الحديد ​توريد مواد البناء من الخرسانة الجاهزة",
         page_supply_heading: "فئات التوريد لدينا",
         
         cat_supply_1_h3: "أنظمة الكتروميكانيك والتيار الخفيف",
@@ -438,7 +441,7 @@ const translations = {
         proj_1_h3: "مشروع كلية الحاسبات",
         proj_1_p: "أعمال الخرسانة - جامعة شمال جدة (عسفان)",
         proj_1_ser_h3: "ذا هيد كوارترز بيزنس بارك",
-        proj_1_ser_p: "تصميم وتنفيذ مقر شركة فيرتكس (Vertex Company).",
+        proj_1_ser_p: "تصميم وتنفيذ المقر الرئيسي لشركة Vertex - وهو مشروع تطوير متعدد الأغراض متطور يمزج بين التصميم المعماري المعاصر والهندسة الإنشائية المتقدمة.",
         
         proj_2_ser_h3: "مساحات عمل شركة فيرجن",
         proj_2_ser_p: "تصميم وتنفيذ مساحات العمل بشركة Virgin للاتصالات.",
@@ -555,7 +558,7 @@ const translations = {
     project_3_desc: "دمج أنظمة التكييف والكهرباء والسباكة عالية المواصفات للمشاريع الكبرى.",
     
     project_4_title: "القصور الملكية",
-    project_4_desc: "بناء سكني فاخر مع تكسية حجرية معقدة وتشطيبات داخلية راقية (قصور فيصل وفيصل بن نواف).",
+    project_4_desc: "بناء سكني فاخر مع تكسية حجرية معقدة وتشطيبات داخلية راقية (قصر الشيخ فيصل وقصر سمو الامير فيصل بن نواف).",
     
     project_5_title: "مشاريع الفورمولا 1",
     project_5_desc: "تنفيذ البنية التحتية عالية الضغط لسباق الجائزة الكبرى في المملكة.",
@@ -582,6 +585,9 @@ const translations = {
 
     project_13_title: "مشروع كلية الحاسبات",
     project_13_desc: "أعمال الخرسانة - جامعة شمال جدة (عسفان)",
+
+    project_14_title: "مشروع فيرتيكس",
+    project_14_desc: "مشروع تطويري متميز متعدد الاستخدامات، يجمع بين التصميم المعماري المعاصر وأحدث الحلول الهندسية لضمان أعلى معايير الاستدامة والجودة.",
         projects_cta_h2: "هل أنت مستعد لبدء مشروعك؟",
         projects_cta_p: "تواصل معنا اليوم لمناقشة احتياجات البناء الخاصة بك والحصول على استشارة مجانية",
         projects_cta_btn: "تواصل معنا",
@@ -589,3 +595,4 @@ const translations = {
         projects_view_all_text: "عرض جميع المشاريع"
     }
 };
+
