@@ -297,6 +297,54 @@ main {
     color: var(--accent-color);
 }
 
+/* Ensure the language toggle button matches anchor styles */
+.nav-links .lang-switch {
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+    font-weight: 600;
+    font-size: 0.95rem;
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links .lang-switch::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: var(--accent-color);
+    transition: var(--transition);
+    transform: translateX(-50%);
+    border-radius: 3px;
+}
+
+.nav-links .lang-switch:hover,
+.nav-links .lang-switch.active {
+    color: var(--accent-color);
+}
+
+.nav-links .lang-switch:hover::after,
+.nav-links .lang-switch.active::after {
+    width: 60%;
+}
+
+.nav-links .lang-switch:focus,
+.nav-links .lang-switch:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+    color: var(--accent-color);
+}
+
 .nav-links a:hover::after,
 .nav-links a.active::after {
     width: 60%;

@@ -297,6 +297,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (certModal && licenseCards.length > 0) {
         let lastFocusedElement;
+        const getFocusableElements = (container) => {
+            return Array.from(container.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'))
+                .filter(el => !el.hasAttribute('disabled') && el.offsetParent !== null);
+        };
+
+        let activeCertModalFocusHandler = null;
+        const activateCertModalFocusTrap = () => {
+            if (activeCertModalFocusHandler) return;
+            activeCertModalFocusHandler = function(e) {
+                if (!certModal.classList.contains('active')) return;
+                if (e.key !== 'Tab') return;
+                const focusable = getFocusableElements(certModal);
+                if (!focusable.length) return;
+                const first = focusable[0];
+                const last = focusable[focusable.length - 1];
+                if (e.shiftKey && document.activeElement === first) {
+                    e.preventDefault();
+                    last.focus();
+                } else if (!e.shiftKey && document.activeElement === last) {
+                    e.preventDefault();
+                    first.focus();
+                }
+            };
+            document.addEventListener('keydown', activeCertModalFocusHandler);
+        };
+
+        const deactivateCertModalFocusTrap = () => {
+            if (!activeCertModalFocusHandler) return;
+            document.removeEventListener('keydown', activeCertModalFocusHandler);
+            activeCertModalFocusHandler = null;
+        };
 
         licenseCards.forEach(card => {
             card.addEventListener('click', function() {
@@ -316,6 +347,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     setTimeout(() => {
                         certModalClose.focus();
                     }, 100);
+                    activateCertModalFocusTrap();
                 }
             });
         });
@@ -326,6 +358,7 @@ document.addEventListener('DOMContentLoaded', function() {
             certModal.setAttribute('aria-hidden', 'true');
             document.body.style.overflow = '';
             
+            deactivateCertModalFocusTrap();
             // Return focus to the last focused element
             if (lastFocusedElement) {
                 lastFocusedElement.focus();
@@ -472,47 +505,48 @@ const projectGalleries = {
 
     ],
     "5": [
-        "Imgs/projects/Formula1/WhatsApp Image 2026-05-14 at 12.52.20 PM.webp",
-        "Imgs/projects/Formula1/WhatsApp Image 2026-05-14 at 12.52.21 PM.webp",
-        "Imgs/projects/Formula1/WhatsApp Image 2026-05-14 at 12.52.22 PM (1).webp",
-        "Imgs/projects/Formula1/WhatsApp Image 2026-05-14 at 12.52.22 PM.webp",
-        "Imgs/projects/Formula1/WhatsApp Image 2026-05-14 at 12.52.13 PM.webp",
-        "Imgs/projects/Formula1/WhatsApp Image 2026-05-14 at 12.52.14 PM.webp",
-        "Imgs/projects/Formula1/WhatsApp Image 2026-05-14 at 12.52.19 PM.webp",
-        "Imgs/projects/Formula1/WhatsApp Image 2026-05-14 at 12.52.19 PM (1).webp",
-        "Imgs/projects/Formula1/WhatsApp Image 2026-05-14 at 12.52.17 PM.webp",
+        "Imgs/projects/Formula1/formula1-01.webp",
+        "Imgs/projects/Formula1/formula1-02.webp",
+        "Imgs/projects/Formula1/formula1-03.webp",
+        "Imgs/projects/Formula1/formula1-04.webp",
+        "Imgs/projects/Formula1/formula1-05.webp",
+        "Imgs/projects/Formula1/formula1-06.webp",
+        "Imgs/projects/Formula1/formula1-07.webp",
+        "Imgs/projects/Formula1/formula1-08.webp",
+        "Imgs/projects/Formula1/formula1-09.webp",
     ],
     "6": [
-        "Imgs/projects/MyClinic-Hospital/WhatsApp Image 2026-05-15 at 5.03.33 PM.webp",
-        "Imgs/projects/MyClinic-Hospital/WhatsApp Image 2026-05-15 at 5.03.34 PM.webp",
-        "Imgs/projects/MyClinic-Hospital/WhatsApp Image 2026-05-15 at 5.03.32 PM (2).webp",
-        "Imgs/projects/MyClinic-Hospital/WhatsApp Image 2026-05-15 at 5.03.32 PM.webp",
-        "Imgs/projects/MyClinic-Hospital/WhatsApp Image 2026-05-15 at 5.03.32 PM (1).webp",
-        "Imgs/projects/MyClinic-Hospital/WhatsApp Image 2026-05-15 at 5.03.33 PM (1).webp",
+        "Imgs/projects/MyClinic-Hospital/myclinic-01.webp",
+        "Imgs/projects/MyClinic-Hospital/myclinic-02.webp",
+        "Imgs/projects/MyClinic-Hospital/myclinic-03.webp",
+        "Imgs/projects/MyClinic-Hospital/myclinic-04.webp",
+        "Imgs/projects/MyClinic-Hospital/myclinic-05.webp",
+        "Imgs/projects/MyClinic-Hospital/myclinic-06.webp",
     ],
     "7": [
-        "Imgs/projects/Solar-System/10f1d00bbe1142c19595a3b8a12846df.webp",
-        "Imgs/projects/Solar-System/9cdaa5882f4d47ba883df7016c101e01.webp",
-        "Imgs/projects/Solar-System/d62467ea9b0640bfba60baa564f57ff0.webp",
-        "Imgs/projects/Solar-System/WhatsApp Image 2026-05-15 at 5.31.52 PM.webp",
-        "Imgs/projects/Solar-System/WhatsApp Image 2026-05-15 at 5.31.53 PM (1).webp",
-        "Imgs/projects/Solar-System/WhatsApp Image 2026-05-15 at 5.31.53 PM.webp",
+        
+        "Imgs/projects/Solar-System/solar-01.webp",
+        "Imgs/projects/Solar-System/solar-02.webp",
+        "Imgs/projects/Solar-System/solar-03.webp",
+        "Imgs/projects/Solar-System/solar-04.webp",
+        "Imgs/projects/Solar-System/solar-05.webp",
+        "Imgs/projects/Solar-System/solar-06.webp",
     ],
     "8": [
-        "Imgs/projects/University-Mall/WhatsApp Image 2026-05-14 at 2.02.08 PM.webp",
-        "Imgs/projects/University-Mall/WhatsApp Image 2026-05-14 at 2.02.09 PM (1).webp",
-        "Imgs/projects/University-Mall/WhatsApp Image 2026-05-14 at 2.02.09 PM (2).webp",
-        "Imgs/projects/University-Mall/WhatsApp Image 2026-05-14 at 2.02.09 PM.webp",
-        "Imgs/projects/University-Mall/WhatsApp Image 2026-05-14 at 2.02.10 PM (2).webp",
-        "Imgs/projects/University-Mall/WhatsApp Image 2026-05-14 at 2.02.10 PM.webp",
+        "Imgs/projects/University-Mall/university-mall-01.webp",
+        "Imgs/projects/University-Mall/university-mall-02.webp",
+        "Imgs/projects/University-Mall/university-mall-03.webp",
+        "Imgs/projects/University-Mall/university-mall-04.webp",
+        "Imgs/projects/University-Mall/university-mall-05.webp",
+        "Imgs/projects/University-Mall/university-mall-06.webp",
     ],
     
     "9": [
-        "Imgs/projects/Virgin-Workstation/WhatsApp Image 2026-05-15 at 2.13.22 PM (1).webp",
-        "Imgs/projects/Virgin-Workstation/WhatsApp Image 2026-05-15 at 2.13.22 PM.webp",
-        "Imgs/projects/Virgin-Workstation/WhatsApp Image 2026-05-15 at 2.13.23 PM (2).webp",
-        "Imgs/projects/Virgin-Workstation/WhatsApp Image 2026-05-15 at 2.13.23 PM.webp",
-        "Imgs/projects/Virgin-Workstation/WhatsApp Image 2026-05-15 at 2.13.24 PM.webp",
+        "Imgs/projects/Virgin-Workstation/virgin-workstation-01.webp",
+        "Imgs/projects/Virgin-Workstation/virgin-workstation-02.webp",
+        "Imgs/projects/Virgin-Workstation/virgin-workstation-03.webp",
+        "Imgs/projects/Virgin-Workstation/virgin-workstation-04.webp",
+        "Imgs/projects/Virgin-Workstation/virgin-workstation-05.webp",
     ],
     "10": [
         "Imgs/projects/WhiteSand/whiteSands1.webp",
@@ -526,33 +560,31 @@ const projectGalleries = {
 
     ],
     "11": [
-        "Imgs/projects/Villas-and-housing/WhatsApp Image 2026-05-15 at 5.10.14 PM.webp",
-        "Imgs/projects/Villas-and-housing/WhatsApp Image 2026-05-15 at 5.10.15 PM (1).webp",
-        "Imgs/projects/Villas-and-housing/WhatsApp Image 2026-05-15 at 5.10.15 PM (2).webp",
-        "Imgs/projects/Villas-and-housing/WhatsApp Image 2026-05-15 at 5.10.15 PM.webp",
-        "Imgs/projects/Villas-and-housing/WhatsApp Image 2026-05-15 at 5.10.14 PM (1).webp",
-        "Imgs/projects/Villas-and-housing/WhatsApp Image 2026-05-15 at 5.10.12 PM.webp",
-        "Imgs/projects/Villas-and-housing/WhatsApp Image 2026-05-15 at 5.10.12 PM (1).webp",
-        "Imgs/projects/Villas-and-housing/WhatsApp Image 2026-05-15 at 5.10.13 PM (1).webp",
-        "Imgs/projects/Villas-and-housing/WhatsApp Image 2026-05-15 at 5.10.13 PM.webp",
-        "Imgs/projects/Villas-and-housing/WhatsApp Image 2026-05-15 at 5.10.11 PM.webp",
+        "Imgs/projects/Villas-and-housing/villas-and-housing-01.webp",
+        "Imgs/projects/Villas-and-housing/villas-and-housing-02.webp",
+        "Imgs/projects/Villas-and-housing/villas-and-housing-03.webp",
+        "Imgs/projects/Villas-and-housing/villas-and-housing-04.webp",
+        "Imgs/projects/Villas-and-housing/villas-and-housing-05.webp",
+        "Imgs/projects/Villas-and-housing/villas-and-housing-06.webp",
+        "Imgs/projects/Villas-and-housing/villas-and-housing-07.webp",
+        "Imgs/projects/Villas-and-housing/villas-and-housing-08.webp",
+        "Imgs/projects/Villas-and-housing/villas-and-housing-09.webp",
+        "Imgs/projects/Villas-and-housing/villas-and-housing-10.webp",
     ],
     "12": [
-        "Imgs/projects/Pools/19228bce0765412896e8dfabb149b687.webp",
-        "Imgs/projects/Pools/4f66115508e34a69b7df7a78b01c0e68.webp",
-        "Imgs/projects/Pools/b84e9e5e8ae345698f3749165b877d98.webp",
-        "Imgs/projects/Pools/d5f59e71c1f245fca65ffa8259984951.webp",
-        "Imgs/projects/Pools/e47a609fc37e4e0abf8a2d116178b272.webp",
-        "Imgs/projects/Pools/WhatsApp Image 2026-05-15 at 2.23.51 PM-artguru.webp",
-        "Imgs/projects/Pools/WhatsApp Image 2026-05-15 at 2_imgupscaler.ai__2K (1).webp",
-        "Imgs/projects/Pools/WhatsApp Image 2026-05-15 at 2_imgupscaler.ai__2K.webp",
+        "Imgs/projects/Pools/pools-01.webp",
+        "Imgs/projects/Pools/pools-02.webp",
+        "Imgs/projects/Pools/pools-03.webp",
+        "Imgs/projects/Pools/pools-04.webp",
+        "Imgs/projects/Pools/pools-05.webp",
+        "Imgs/projects/Pools/pools-06.webp",
+        "Imgs/projects/Pools/pools-07.webp",
     ],
     "13": [
         "Imgs/projects/ComputerCollage/cardComputerCollage.webp",
         "Imgs/projects/ComputerCollage/computerCollage.webp",
         "Imgs/projects/ComputerCollage/computerCollage2.webp",
         "Imgs/projects/ComputerCollage/computerCollage3.webp",
-        "Imgs/projects/ComputerCollage/IMG-20260508-WA0028.webp",
         ],
     "14": [
         "Imgs/projects/Vertex-Project/Vertex-main.webp",
@@ -598,6 +630,21 @@ function ensureProjectLightboxElements() {
             nextImage();
         } else if (e.key === 'ArrowLeft') {
             prevImage();
+        } else if (e.key === 'Tab') {
+            const lightbox = document.getElementById('projectsLightbox');
+            if (!lightbox) return;
+            const focusable = Array.from(lightbox.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'))
+                .filter(el => !el.hasAttribute('disabled') && el.offsetParent !== null);
+            if (!focusable.length) return;
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+            }
         }
     });
 

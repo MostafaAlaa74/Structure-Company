@@ -32,8 +32,7 @@
     <link rel="preload" href="style.css" as="style">
     <link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+    <!-- Font Awesome duplicate import removed; already loaded once above -->
 </head>
 <body>
 
@@ -75,7 +74,7 @@
                 <a href="index.html#licenses" data-i18n="nav_certs">Certifications</a>
                 <a href="index.html#partners" data-i18n="nav_partners">Partners</a>
                 <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
-                <a href="#" class="lang-switch" id="langToggle" aria-label="Switch language"><i class="fas fa-globe"></i> <span data-i18n="lang_text">العربية</span></a>
+                <button type="button" class="lang-switch" id="langToggle" aria-label="Switch language"><i class="fas fa-globe"></i> <span data-i18n="lang_text">العربية</span></button>
             </nav>
             <button class="mobile-menu-btn" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
         </div>
@@ -102,11 +101,11 @@
                 <!-- Projects Grid -->
                 <div class="projects-gallery-grid">
     
-    <div class="project-card" data-project-id="1" onclick="openProjectGallery('1')" role="button" tabindex="0">
+    <div class="project-card" data-project-id="1">
         <div class="project-image-wrapper">
             <img src="Imgs/projects/Al-Mourjan-logo/Al-Mourjan-logo1.webp" alt="Al Mourjan Project" class="gallery-image" loading="lazy">
             <div class="project-overlay">
-                <button class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
+                <button type="button" onclick="openProjectGallery('1')" class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
                     <i class="fas fa-search-plus"></i> <span data-i18n="projects_view_text">View</span>
                 </button>
             </div>
@@ -117,11 +116,11 @@
         </div>
     </div>
 
-    <div class="project-card" data-project-id="2" onclick="openProjectGallery('2')" role="button" tabindex="0">
+    <div class="project-card" data-project-id="2">
         <div class="project-image-wrapper">
             <img src="Imgs/projects/Duct-Bank/Duct-Bank5.webp" alt="Duct Bank Works" class="gallery-image" loading="lazy">
             <div class="project-overlay">
-                <button class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
+                <button type="button" onclick="openProjectGallery('2')" class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
                     <i class="fas fa-search-plus"></i> <span data-i18n="projects_view_text">View</span>
                 </button>
             </div>
@@ -132,11 +131,11 @@
         </div>
     </div>
 
-    <div class="project-card" data-project-id="3" onclick="openProjectGallery('3')" role="button" tabindex="0">
+    <div class="project-card" data-project-id="3">
         <div class="project-image-wrapper">
             <img src="Imgs/projects/Electromechanical/Electromechanical1.webp" alt="Electromechanical Systems" class="gallery-image" loading="lazy">
             <div class="project-overlay">
-                <button class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
+                <button type="button" onclick="openProjectGallery('3')" class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
                     <i class="fas fa-search-plus"></i> <span data-i18n="projects_view_text">View</span>
                 </button>
             </div>
@@ -147,11 +146,11 @@
         </div>
     </div>
 
-    <div class="project-card" data-project-id="4" onclick="openProjectGallery('4')" role="button" tabindex="0">
+    <div class="project-card" data-project-id="4">
         <div class="project-image-wrapper">
             <img src="Imgs/projects/Faisal-Palace/Faisal-Palace1.webp" alt="Royal Palaces" class="gallery-image" loading="lazy">
             <div class="project-overlay">
-                <button class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
+                <button type="button" onclick="openProjectGallery('4')" class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
                     <i class="fas fa-search-plus"></i> <span data-i18n="projects_view_text">View</span>
                 </button>
             </div>
@@ -162,11 +161,11 @@
         </div>
     </div>
 
-    <div class="project-card" data-project-id="5" onclick="openProjectGallery('5')" role="button" tabindex="0">
+    <div class="project-card" data-project-id="5">
         <div class="project-image-wrapper">
-            <img src="Imgs/projects/Formula1/WhatsApp Image 2026-05-14 at 12.52.22 PM (1).webp" alt="Formula 1 Projects" class="gallery-image" loading="lazy">
+            <img src="Imgs/projects/Formula1/formula1-01.webp" alt="Formula 1 Projects" class="gallery-image" loading="lazy">
             <div class="project-overlay">
-                <button class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
+                <button type="button" onclick="openProjectGallery('5')" class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
                     <i class="fas fa-search-plus"></i> <span data-i18n="projects_view_text">View</span>
                 </button>
             </div>
@@ -177,11 +176,11 @@
         </div>
     </div>
 
-    <div class="project-card" data-project-id="6" onclick="openProjectGallery('6')" role="button" tabindex="0">
+    <div class="project-card" data-project-id="6">
         <div class="project-image-wrapper">
-            <img src="Imgs/projects/MyClinic-Hospital/WhatsApp Image 2026-05-15 at 5.03.33 PM.webp" alt="My Clinic Hospital" class="gallery-image" loading="lazy">
+            <img src="Imgs/projects/MyClinic-Hospital/myclinic-01.webp" alt="My Clinic Hospital" class="gallery-image" loading="lazy">
             <div class="project-overlay">
-                <button class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
+                <button type="button" onclick="openProjectGallery('6')" class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
                     <i class="fas fa-search-plus"></i> <span data-i18n="projects_view_text">View</span>
                 </button>
             </div>
@@ -192,11 +191,11 @@
         </div>
     </div>
 
-    <div class="project-card" data-project-id="7" onclick="openProjectGallery('7')" role="button" tabindex="0">
+    <div class="project-card" data-project-id="7">
         <div class="project-image-wrapper">
-            <img src="Imgs/projects/Solar-System/10f1d00bbe1142c19595a3b8a12846df.webp" alt="Solar Energy Systems" class="gallery-image" loading="lazy">
+            <img src="Imgs/projects/Solar-System/solar-01.webp" alt="Solar Energy Systems" class="gallery-image" loading="lazy">
             <div class="project-overlay">
-                <button class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
+                <button type="button" onclick="openProjectGallery('7')" class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
                     <i class="fas fa-search-plus"></i> <span data-i18n="projects_view_text">View</span>
                 </button>
             </div>
@@ -207,11 +206,11 @@
         </div>
     </div>
 
-    <div class="project-card" data-project-id="8" onclick="openProjectGallery('8')" role="button" tabindex="0">
+    <div class="project-card" data-project-id="8">
         <div class="project-image-wrapper">
-            <img src="Imgs/projects/University-Mall/WhatsApp Image 2026-05-14 at 2.02.08 PM.webp" alt="University Mall" class="gallery-image" loading="lazy">
+            <img src="Imgs/projects/University-Mall/university-mall-01.webp" alt="University Mall" class="gallery-image" loading="lazy">
             <div class="project-overlay">
-                <button class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
+                <button type="button" onclick="openProjectGallery('8')" class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
                     <i class="fas fa-search-plus"></i> <span data-i18n="projects_view_text">View</span>
                 </button>
             </div>
@@ -222,11 +221,11 @@
         </div>
     </div>
 
-    <div class="project-card" data-project-id="9" onclick="openProjectGallery('9')" role="button" tabindex="0">
+    <div class="project-card" data-project-id="9">
         <div class="project-image-wrapper">
-            <img src="Imgs/projects/Virgin-Workstation/WhatsApp Image 2026-05-15 at 2.13.22 PM (1).webp" alt="Virgin Workstation" class="gallery-image" loading="lazy">
+            <img src="Imgs/projects/Virgin-Workstation/virgin-workstation-01.webp" alt="Virgin Workstation" class="gallery-image" loading="lazy">
             <div class="project-overlay">
-                <button class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
+                <button type="button" onclick="openProjectGallery('9')" class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
                     <i class="fas fa-search-plus"></i> <span data-i18n="projects_view_text">View</span>
                 </button>
             </div>
@@ -237,11 +236,11 @@
         </div>
     </div>
 
-    <div class="project-card" data-project-id="10" onclick="openProjectGallery('10')" role="button" tabindex="0">
+    <div class="project-card" data-project-id="10">
         <div class="project-image-wrapper">
             <img src="Imgs/projects/WhiteSand/whiteSands1.webp" alt="WhiteSand Project" class="gallery-image" loading="lazy">
             <div class="project-overlay">
-                <button class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
+                <button type="button" onclick="openProjectGallery('10')" class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
                     <i class="fas fa-search-plus"></i> <span data-i18n="projects_view_text">View</span>
                 </button>
             </div>
@@ -252,11 +251,11 @@
         </div>
     </div>
 
-    <div class="project-card" data-project-id="11" onclick="openProjectGallery('11')" role="button" tabindex="0">
+    <div class="project-card" data-project-id="11">
         <div class="project-image-wrapper">
-            <img src="Imgs/projects/Villas-and-housing/WhatsApp Image 2026-05-15 at 5.10.14 PM.webp" alt="Villas and Housing" class="gallery-image" loading="lazy">
+            <img src="Imgs/projects/Villas-and-housing/villas-and-housing-01.webp" alt="Villas and Housing" class="gallery-image" loading="lazy">
             <div class="project-overlay">
-                <button class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
+                <button type="button" onclick="openProjectGallery('11')" class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
                     <i class="fas fa-search-plus"></i> <span data-i18n="projects_view_text">View</span>
                 </button>
             </div>
@@ -267,11 +266,11 @@
         </div>
     </div>
 
-    <div class="project-card" data-project-id="12" onclick="openProjectGallery('12')" role="button" tabindex="0">
+    <div class="project-card" data-project-id="12">
     <div class="project-image-wrapper">
-        <img src="Imgs/projects/Pools/19228bce0765412896e8dfabb149b687.webp" alt="Pools and Fountains" class="gallery-image" loading="lazy">
+        <img src="Imgs/projects/Pools/pools-01.webp" alt="Pools and Fountains" class="gallery-image" loading="lazy">
         <div class="project-overlay">
-            <button class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
+                <button type="button" onclick="openProjectGallery('12')" class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
                 <i class="fas fa-search-plus"></i> <span data-i18n="projects_view_text">View</span>
             </button>
         </div>
@@ -281,11 +280,11 @@
         <p data-i18n="project_12_desc">Design, construction, and electromechanical execution of luxury swimming pools and modern water features.</p>
     </div>
 </div>
-    <div class="project-card" data-project-id="13" onclick="openProjectGallery('13')" role="button" tabindex="0">
+    <div class="project-card" data-project-id="13">
     <div class="project-image-wrapper">
         <img src="Imgs/projects/ComputerCollage/cardComputerCollage.webp" alt="Pools and Fountains" class="gallery-image" loading="lazy">
         <div class="project-overlay">
-            <button class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
+                <button type="button" onclick="openProjectGallery('13')" class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
                 <i class="fas fa-search-plus"></i> <span data-i18n="projects_view_text">View</span>
             </button>
         </div>
@@ -295,11 +294,11 @@
         <p data-i18n="project_13_desc">Concrete Works - University of North Jeddah (Usfan).</p>
     </div>
 </div>
-    <div class="project-card" data-project-id="14" onclick="openProjectGallery('14')" role="button" tabindex="0">
+    <div class="project-card" data-project-id="14">
     <div class="project-image-wrapper">
         <img src="Imgs/projects/Vertex-Project/Vertex-main.webp" alt="Vertex Project - Modern Innovation" class="gallery-image" loading="lazy">
         <div class="project-overlay">
-            <button class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
+                <button type="button" onclick="openProjectGallery('14')" class="project-view-btn" aria-label="View project image" data-i18n="projects_view">
                 <i class="fas fa-search-plus"></i> <span data-i18n="projects_view_text">View</span>
             </button>
         </div>
@@ -372,7 +371,7 @@
     </footer>
 
     <!-- Projects Lightbox Modal -->
-    <div class="projects-lightbox" id="projectsLightbox" role="dialog" aria-labelledby="lightboxTitle" aria-hidden="true">
+    <div class="projects-lightbox" id="projectsLightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle" aria-hidden="true">
         <div class="lightbox-overlay"></div>
         <div class="lightbox-content">
             <button class="lightbox-close" aria-label="Close image lightbox"><i class="fas fa-times"></i></button>
